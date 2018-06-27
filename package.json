@@ -29,6 +29,7 @@
     "hexdump-nodejs": "^0.1.0",
     "minimist": "^1.2.0",
     "nan": "^2.10.0",
+    "underscore": "^1.9.1",
     "varint": "^5.0.0"
   },
   "devDependencies": {
