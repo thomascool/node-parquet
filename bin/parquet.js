@@ -82,7 +82,9 @@ function xsv(file, delimitor, max) {
   }
   for (var i = 0; i < n; i++) {
     data = reader.rows(1);
-    process.stdout.write(JSON.stringify(data[0]).replace(/^\[|\]/g,'').replace(/,/g,delimitor) + '\n');
+    process.stdout.write(
+	((delimitor === ',') ? JSON.stringify(data[0]).replace(/^\[|\]/g,'') : JSON.stringify(data[0]).replace(/^\[|\]/g,'').replace(/,/g,delimitor).replace(/"/g,'')) + '\n'
+    );
   }
 }
 
